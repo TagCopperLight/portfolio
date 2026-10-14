@@ -51,7 +51,7 @@ html {
 
 body {
   margin: 0;
-  padding: var(--margin-top) var(--margin-x) calc(var(--margin-top) * 2);
+  padding: var(--margin-top) var(--margin-x);
 }
 
 h1,
@@ -149,7 +149,9 @@ h1 a:hover {
   margin-top: calc(var(--row) + var(--section-gap));
 }
 
+/* The opening bracket hangs in the margin so the header's text lines up with the rows */
 .section > h2 {
+  margin: 0 0 10px -1ch;
   line-height: var(--header-row);
   color: var(--text-secondary);
 }
