@@ -1,0 +1,237 @@
+/* Same Monaco file Aurora ships (aurora_ui/assets/Monaco.otf) */
+@font-face {
+  font-family: "Aurora Monaco";
+  src: url("/fonts/Monaco.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tokens: aurora-style-guide.md §8 */
+:root {
+  --bg: #05060b;
+  --text: #d9d9d9;
+  --text-secondary: #cbc6e6;
+  --text-disabled: #8b8c91;
+  --gray: #3e4151;
+  --delimiter: #5a5a62;
+
+  --blue: #73bff9;
+  --purple: #d2befb;
+  --orange: #f5ba60;
+  --success: #dff3ac;
+  --error: #edb3b6;
+
+  --font: "Aurora Monaco", "Monaco", "Menlo", "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+  --size: 16px;
+
+  --margin-x: 50px;
+  --margin-top: 30px;
+  --row: 30px;
+  --header-row: 40px;
+  --section-gap: 20px;
+  --column: 640px;
+  --fade: 100ms linear;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  font: 400 var(--size) / var(--row) var(--font);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: var(--margin-top) var(--margin-x) calc(var(--margin-top) * 2);
+}
+
+h1,
+h2,
+p,
+dl,
+dd,
+ul {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+::selection {
+  background: var(--purple);
+  color: var(--bg);
+}
+
+/* Links and controls: dim until hovered */
+a,
+button {
+  color: var(--text-disabled);
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--fade);
+}
+a:hover,
+a:focus-visible,
+button:hover,
+button:focus-visible {
+  color: var(--text);
+}
+:focus-visible {
+  outline: 1px solid var(--delimiter);
+  outline-offset: 4px;
+}
+
+/* Header */
+.lang {
+  position: absolute;
+  top: var(--margin-top);
+  right: var(--margin-x);
+  line-height: var(--row);
+}
+
+.intro,
+main {
+  max-width: var(--column);
+}
+
+h1 {
+  font-size: 32px;
+  line-height: var(--header-row);
+}
+
+.subtitle {
+  color: var(--text-disabled);
+}
+
+/* [SECTION] */
+.section {
+  margin-top: calc(var(--row) + var(--section-gap));
+}
+
+.section > h2 {
+  line-height: var(--header-row);
+  color: var(--text-secondary);
+}
+
+/* LABEL ............ value */
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2ch;
+  min-height: var(--row);
+}
+
+/* [PROJECTS] */
+.projects {
+  list-style: none;
+}
+
+.projects li + li {
+  margin-top: var(--section-gap);
+}
+
+.project {
+  position: relative;
+  display: block;
+  color: var(--text-disabled);
+}
+
+/* The project's body: a flat circle hanging in the margin, gray until active */
+.project::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--row) / 2 - 4px);
+  left: -22px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gray);
+  transition: background-color var(--fade);
+}
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 2ch;
+}
+
+.project-name {
+  color: var(--text);
+  transition: color var(--fade);
+}
+
+.year {
+  margin-left: 4ch;
+}
+
+.project-desc {
+  display: block;
+  transition: color var(--fade);
+}
+
+.project:hover::before,
+.project:focus-visible::before {
+  background: var(--accent);
+}
+.project:hover .project-name,
+.project:focus-visible .project-name {
+  color: var(--accent);
+}
+.project:hover .project-desc,
+.project:focus-visible .project-desc {
+  color: var(--text);
+}
+
+@media (max-width: 700px) {
+  :root {
+    --margin-x: 24px;
+  }
+
+  /* Keep the name clear of the pinned [FR] toggle */
+  .intro {
+    padding-right: 6ch;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .project::before {
+    left: -16px;
+    width: 6px;
+    height: 6px;
+    top: calc(var(--row) / 2 - 3px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before {
+    transition: none !important;
+  }
+}
+
+/* Location: city + rounded French flag (official colors, 2020 navy) */
+.place {
+  display: flex;
+  align-items: center;
+  gap: 1.5ch;
+}
+
+.flag {
+  width: 21px;
+  height: 14px;
+  flex: none;
+}
