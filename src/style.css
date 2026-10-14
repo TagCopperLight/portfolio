@@ -30,7 +30,7 @@
   --row: 30px;
   --header-row: 40px;
   --section-gap: 20px;
-  --column: 640px;
+  --column: 900px;
   --fade: 100ms linear;
 }
 
@@ -93,22 +93,37 @@ button:focus-visible {
   outline-offset: 4px;
 }
 
-/* Header */
-.lang {
-  position: absolute;
-  top: var(--margin-top);
-  right: var(--margin-x);
-  line-height: var(--row);
+/* Centred column */
+.page {
+  max-width: var(--column);
+  margin: 0 auto;
 }
 
-.intro,
-main {
-  max-width: var(--column);
+/* Header: name left; language toggle and contact links right */
+.top {
+  display: flex;
+  justify-content: space-between;
+  gap: 4ch;
+}
+
+.top-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.lang {
+  line-height: var(--header-row);
 }
 
 h1 {
   font-size: 32px;
   line-height: var(--header-row);
+}
+
+h1 a,
+h1 a:hover {
+  color: var(--text);
 }
 
 .subtitle {
@@ -131,6 +146,11 @@ h1 {
   justify-content: space-between;
   gap: 2ch;
   min-height: var(--row);
+}
+
+/* Values stay right-aligned when they wrap */
+.row dd {
+  text-align: right;
 }
 
 /* [PROJECTS] */
@@ -194,14 +214,50 @@ h1 {
   color: var(--text);
 }
 
+/* Project page */
+.back {
+  display: inline-block;
+  margin-top: calc(var(--row) + var(--section-gap));
+}
+
+.back + .section {
+  margin-top: var(--section-gap);
+}
+
+h2 .accent {
+  color: var(--accent);
+}
+
+.body {
+  margin-top: var(--section-gap);
+}
+
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: calc(var(--section-gap) * 2);
+}
+
 @media (max-width: 700px) {
   :root {
     --margin-x: 24px;
   }
 
-  /* Keep the name clear of the pinned [FR] toggle */
-  .intro {
-    padding-right: 6ch;
+  /* Stack the header; the toggle pins to the corner, clear of the name */
+  .top {
+    flex-direction: column;
+    gap: var(--section-gap);
+  }
+
+  .top-right {
+    align-items: flex-start;
+  }
+
+  .lang {
+    position: absolute;
+    top: var(--margin-top);
+    right: var(--margin-x);
   }
 
   h1 {

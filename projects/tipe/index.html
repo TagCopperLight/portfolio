@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIPE · Julien BOURDET</title>
+    <meta name="description" content="Graph mining and decision trees to find winning combat patterns in League of Legends." />
+    <link rel="canonical" href="https://bourdet.be/projects/tipe/" />
+    <meta property="og:title" content="TIPE · Julien BOURDET" />
+    <meta property="og:description" content="Graph mining and decision trees to find winning combat patterns in League of Legends." />
+    <meta property="og:url" content="https://bourdet.be/projects/tipe/" />
+    <meta name="theme-color" content="#05060B" />
+    <link rel="preload" href="/fonts/Monaco.otf" as="font" type="font/otf" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Hide translatable text until main.ts swaps in French, to avoid an English flash -->
+    <style>.lang-pending [data-i18n] { visibility: hidden; }</style>
+    <script>
+      try {
+        if (localStorage.getItem("lang") === "fr") document.documentElement.classList.add("lang-pending");
+      } catch {}
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <div class="top-left">
+          <h1><a href="/">Julien BOURDET</a></h1>
+          <p class="subtitle" data-i18n="subtitle">SOFTWARE ENGINEERING STUDENT</p>
+        </div>
+        <div class="top-right">
+          <button class="lang" type="button" data-lang-toggle aria-label="Français" lang="fr">[FR]</button>
+          <a href="mailto:julien@bourdet.be">julien@bourdet.be</a>
+          <a href="https://github.com/TagCopperLight" target="_blank" rel="noopener">github.com/TagCopperLight</a>
+        </div>
+      </header>
+
+      <main style="--accent: var(--success)">
+        <a class="back" href="/" data-i18n="nav.back">[← BACK]</a>
+
+        <section class="section">
+          <h2>[<span class="accent">TIPE</span>]</h2>
+          <dl>
+            <div class="row">
+              <dt data-i18n="label.context">CONTEXT</dt>
+              <dd data-i18n="tipe.context">TIPE, supervised research project</dd>
+            </div>
+            <div class="row">
+              <dt>STACK</dt>
+              <dd>PYTHON</dd>
+            </div>
+            <div class="row">
+              <dt data-i18n="label.year">YEAR</dt>
+              <dd>2024</dd>
+            </div>
+            <div class="row">
+              <dt>SOURCE</dt>
+              <dd><a href="https://github.com/TagCopperLight/TIPE" target="_blank" rel="noopener">[GITHUB]</a></dd>
+            </div>
+          </dl>
+          <p class="body" data-i18n="tipe.body">A Python tool to analyze and visualize combat patterns in League of Legends, using data scraping, decision trees and graph mining techniques.</p>
+          <img class="shot" src="/projects/tipe.webp" width="1800" height="811" alt="Frequent combat subgraphs across successive time frames" loading="lazy" />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

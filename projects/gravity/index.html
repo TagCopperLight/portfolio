@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gravity · Julien BOURDET</title>
+    <meta name="description" content="2D rigid-body physics engine in pure Python." />
+    <link rel="canonical" href="https://bourdet.be/projects/gravity/" />
+    <meta property="og:title" content="Gravity · Julien BOURDET" />
+    <meta property="og:description" content="2D rigid-body physics engine in pure Python." />
+    <meta property="og:url" content="https://bourdet.be/projects/gravity/" />
+    <meta name="theme-color" content="#05060B" />
+    <link rel="preload" href="/fonts/Monaco.otf" as="font" type="font/otf" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Hide translatable text until main.ts swaps in French, to avoid an English flash -->
+    <style>.lang-pending [data-i18n] { visibility: hidden; }</style>
+    <script>
+      try {
+        if (localStorage.getItem("lang") === "fr") document.documentElement.classList.add("lang-pending");
+      } catch {}
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <div class="top-left">
+          <h1><a href="/">Julien BOURDET</a></h1>
+          <p class="subtitle" data-i18n="subtitle">SOFTWARE ENGINEERING STUDENT</p>
+        </div>
+        <div class="top-right">
+          <button class="lang" type="button" data-lang-toggle aria-label="Français" lang="fr">[FR]</button>
+          <a href="mailto:julien@bourdet.be">julien@bourdet.be</a>
+          <a href="https://github.com/TagCopperLight" target="_blank" rel="noopener">github.com/TagCopperLight</a>
+        </div>
+      </header>
+
+      <main style="--accent: var(--error)">
+        <a class="back" href="/" data-i18n="nav.back">[← BACK]</a>
+
+        <section class="section">
+          <h2>[<span class="accent">GRAVITY</span>]</h2>
+          <dl>
+            <div class="row">
+              <dt data-i18n="label.context">CONTEXT</dt>
+              <dd data-i18n="gravity.context">Personal project</dd>
+            </div>
+            <div class="row">
+              <dt>STACK</dt>
+              <dd>PYTHON</dd>
+            </div>
+            <div class="row">
+              <dt data-i18n="label.year">YEAR</dt>
+              <dd>2023</dd>
+            </div>
+            <div class="row">
+              <dt>SOURCE</dt>
+              <dd><a href="https://github.com/TagCopperLight/Gravity" target="_blank" rel="noopener">[GITHUB]</a></dd>
+            </div>
+          </dl>
+          <p class="body" data-i18n="gravity.body">A physics simulation engine that models the behaviour of rigid bodies under various forces, using a choice of numerical solvers.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

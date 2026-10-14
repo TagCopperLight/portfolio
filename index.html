@@ -28,94 +28,88 @@
     <script type="module" src="/src/main.ts"></script>
   </head>
   <body>
-    <button class="lang" type="button" data-lang-toggle aria-label="Français" lang="fr">[FR]</button>
+    <div class="page">
+      <header class="top">
+        <div class="top-left">
+          <h1><a href="/">Julien BOURDET</a></h1>
+          <p class="subtitle" data-i18n="subtitle">SOFTWARE ENGINEERING STUDENT</p>
+        </div>
+        <div class="top-right">
+          <button class="lang" type="button" data-lang-toggle aria-label="Français" lang="fr">[FR]</button>
+          <a href="mailto:julien@bourdet.be">julien@bourdet.be</a>
+          <a href="https://github.com/TagCopperLight" target="_blank" rel="noopener">github.com/TagCopperLight</a>
+        </div>
+      </header>
 
-    <header class="intro">
-      <h1>Julien BOURDET</h1>
-      <p class="subtitle" data-i18n="subtitle">SOFTWARE ENGINEERING STUDENT</p>
-    </header>
+      <main>
+        <section class="section">
+          <h2 data-i18n="section.about">[ABOUT]</h2>
+          <dl>
+            <div class="row">
+              <dt data-i18n="label.school">SCHOOL</dt>
+              <dd>ENSSAT&nbsp;&nbsp;2024 – 2027</dd>
+            </div>
+            <div class="row">
+              <dt data-i18n="label.location">LOCATION</dt>
+              <dd class="place">
+                Marseille, France
+              </dd>
+            </div>
+          </dl>
+        </section>
 
-    <main>
-      <section class="section">
-        <h2 data-i18n="section.about">[ABOUT]</h2>
-        <dl>
-          <div class="row">
-            <dt data-i18n="label.school">SCHOOL</dt>
-            <dd>ENSSAT&nbsp;&nbsp;2024 – 2027</dd>
-          </div>
-          <div class="row">
-            <dt data-i18n="label.location">LOCATION</dt>
-            <dd class="place">
-              Marseille, France
-            </dd>
-          </div>
-        </dl>
-      </section>
+        <section class="section">
+          <h2 data-i18n="section.projects">[PROJECTS]</h2>
+          <ul class="projects">
+            <li>
+              <a class="project" href="/projects/roadia/" style="--accent: var(--blue)">
+                <span class="project-head">
+                  <span class="project-name">ROADIA</span>
+                  <span class="project-meta">RUST&nbsp;&nbsp;TS<span class="year">2026</span></span>
+                </span>
+                <span class="project-desc" data-i18n="roadia">Traffic simulator and editor for real OpenStreetMap road networks. Team of 5, ENSSAT.</span>
+              </a>
+            </li>
+            <li>
+              <a class="project" href="/projects/gripsou/" style="--accent: var(--purple)">
+                <span class="project-head">
+                  <span class="project-name">GRIPSOU</span>
+                  <span class="project-meta">RUST&nbsp;&nbsp;TS<span class="year">2026</span></span>
+                </span>
+                <span class="project-desc" data-i18n="gripsou">Self-hosted finance dashboard that syncs bank and broker accounts.</span>
+              </a>
+            </li>
+            <li>
+              <a class="project" href="/projects/aurora/" style="--accent: var(--orange)">
+                <span class="project-head">
+                  <span class="project-name">AURORA</span>
+                  <span class="project-meta">C++&nbsp;&nbsp;VULKAN<span class="year">2025</span></span>
+                </span>
+                <span class="project-desc" data-i18n="aurora">Vulkan toolkit that renders live data sent by any program over a small network protocol.</span>
+              </a>
+            </li>
+            <li>
+              <a class="project" href="/projects/tipe/" style="--accent: var(--success)">
+                <span class="project-head">
+                  <span class="project-name">TIPE</span>
+                  <span class="project-meta">PYTHON<span class="year">2024</span></span>
+                </span>
+                <span class="project-desc" data-i18n="tipe">Graph mining and decision trees to find winning combat patterns in League of Legends.</span>
+              </a>
+            </li>
+            <li>
+              <a class="project" href="/projects/gravity/" style="--accent: var(--error)">
+                <span class="project-head">
+                  <span class="project-name">GRAVITY</span>
+                  <span class="project-meta">PYTHON<span class="year">2023</span></span>
+                </span>
+                <span class="project-desc" data-i18n="gravity">2D rigid-body physics engine in pure Python.</span>
+              </a>
+            </li>
+          </ul>
+        </section>
 
-      <section class="section">
-        <h2 data-i18n="section.projects">[PROJECTS]</h2>
-        <ul class="projects">
-          <li>
-            <a class="project" href="https://github.com/TagCopperLight/RoadIA" target="_blank" rel="noopener" style="--accent: var(--blue)">
-              <span class="project-head">
-                <span class="project-name">ROADIA</span>
-                <span class="project-meta">RUST&nbsp;&nbsp;TS<span class="year">2026</span></span>
-              </span>
-              <span class="project-desc" data-i18n="roadia">Traffic simulator and editor for real OpenStreetMap road networks. Team of 5, ENSSAT.</span>
-            </a>
-          </li>
-          <li>
-            <a class="project" href="https://github.com/TagCopperLight/gripsou" target="_blank" rel="noopener" style="--accent: var(--purple)">
-              <span class="project-head">
-                <span class="project-name">GRIPSOU</span>
-                <span class="project-meta">RUST&nbsp;&nbsp;TS<span class="year">2026</span></span>
-              </span>
-              <span class="project-desc" data-i18n="gripsou">Self-hosted finance dashboard that syncs bank and broker accounts.</span>
-            </a>
-          </li>
-          <li>
-            <a class="project" href="https://github.com/TagCopperLight/Aurora" target="_blank" rel="noopener" style="--accent: var(--orange)">
-              <span class="project-head">
-                <span class="project-name">AURORA</span>
-                <span class="project-meta">C++&nbsp;&nbsp;VULKAN<span class="year">2025</span></span>
-              </span>
-              <span class="project-desc" data-i18n="aurora">Vulkan toolkit that renders live data sent by any program over a small network protocol.</span>
-            </a>
-          </li>
-          <li>
-            <a class="project" href="https://github.com/TagCopperLight/TIPE" target="_blank" rel="noopener" style="--accent: var(--success)">
-              <span class="project-head">
-                <span class="project-name">TIPE</span>
-                <span class="project-meta">PYTHON<span class="year">2024</span></span>
-              </span>
-              <span class="project-desc" data-i18n="tipe">Graph mining and decision trees to find winning combat patterns in League of Legends.</span>
-            </a>
-          </li>
-          <li>
-            <a class="project" href="https://github.com/TagCopperLight/Gravity" target="_blank" rel="noopener" style="--accent: var(--error)">
-              <span class="project-head">
-                <span class="project-name">GRAVITY</span>
-                <span class="project-meta">PYTHON<span class="year">2023</span></span>
-              </span>
-              <span class="project-desc" data-i18n="gravity">2D rigid-body physics engine in pure Python.</span>
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h2>[CONTACT]</h2>
-        <dl>
-          <div class="row">
-            <dt>MAIL</dt>
-            <dd><a href="mailto:julien@bourdet.be">julien@bourdet.be</a></dd>
-          </div>
-          <div class="row">
-            <dt>GITHUB</dt>
-            <dd><a href="https://github.com/TagCopperLight" target="_blank" rel="noopener">TagCopperLight</a></dd>
-          </div>
-        </dl>
-      </section>
-    </main>
+      </main>
+    </div>
   </body>
 </html>

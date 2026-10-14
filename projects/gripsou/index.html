@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gripsou · Julien BOURDET</title>
+    <meta name="description" content="Self-hosted finance dashboard that syncs bank and broker accounts." />
+    <link rel="canonical" href="https://bourdet.be/projects/gripsou/" />
+    <meta property="og:title" content="gripsou · Julien BOURDET" />
+    <meta property="og:description" content="Self-hosted finance dashboard that syncs bank and broker accounts." />
+    <meta property="og:url" content="https://bourdet.be/projects/gripsou/" />
+    <meta name="theme-color" content="#05060B" />
+    <link rel="preload" href="/fonts/Monaco.otf" as="font" type="font/otf" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Hide translatable text until main.ts swaps in French, to avoid an English flash -->
+    <style>.lang-pending [data-i18n] { visibility: hidden; }</style>
+    <script>
+      try {
+        if (localStorage.getItem("lang") === "fr") document.documentElement.classList.add("lang-pending");
+      } catch {}
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <div class="top-left">
+          <h1><a href="/">Julien BOURDET</a></h1>
+          <p class="subtitle" data-i18n="subtitle">SOFTWARE ENGINEERING STUDENT</p>
+        </div>
+        <div class="top-right">
+          <button class="lang" type="button" data-lang-toggle aria-label="Français" lang="fr">[FR]</button>
+          <a href="mailto:julien@bourdet.be">julien@bourdet.be</a>
+          <a href="https://github.com/TagCopperLight" target="_blank" rel="noopener">github.com/TagCopperLight</a>
+        </div>
+      </header>
+
+      <main style="--accent: var(--purple)">
+        <a class="back" href="/" data-i18n="nav.back">[← BACK]</a>
+
+        <section class="section">
+          <h2>[<span class="accent">GRIPSOU</span>]</h2>
+          <dl>
+            <div class="row">
+              <dt data-i18n="label.context">CONTEXT</dt>
+              <dd data-i18n="gripsou.context">Personal project</dd>
+            </div>
+            <div class="row">
+              <dt>STACK</dt>
+              <dd>RUST&nbsp;&nbsp;TS</dd>
+            </div>
+            <div class="row">
+              <dt data-i18n="label.year">YEAR</dt>
+              <dd>2026</dd>
+            </div>
+            <div class="row">
+              <dt>SOURCE</dt>
+              <dd><a href="https://github.com/TagCopperLight/gripsou" target="_blank" rel="noopener">[GITHUB]</a></dd>
+            </div>
+          </dl>
+          <p class="body" data-i18n="gripsou.body">Open-source wealth management web app that connects directly to the user's bank and broker accounts to automatically aggregate accounts, transactions and investments, and track the portfolio's real value day by day. A complete rewrite of an earlier project, rebuilt around a Rust backend and a TypeScript / Vite / Tailwind CSS interface.</p>
+          <img class="shot" src="/projects/gripsou.webp" width="1800" height="1058" alt="gripsou dashboard" loading="lazy" />
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
