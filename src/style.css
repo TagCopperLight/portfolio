@@ -206,8 +206,14 @@ h1 a:hover {
   transition: color var(--fade);
 }
 
+.project-meta {
+  display: flex;
+  gap: 2ch;
+  color: var(--text);
+}
+
 .year {
-  margin-left: 4ch;
+  margin-left: 2ch;
 }
 
 .project-desc {
@@ -236,6 +242,42 @@ h1 a:hover {
 
 .back + .section {
   margin-top: var(--section-gap);
+}
+
+/* STACK: brand glyph before each label, in a pastel of the brand colour.
+   Simple Icons (CC0), except two hand-drawn ones: Vulkan (a swoosh, its logo is a wordmark)
+   and Rust (a plain gear and R, the official one blurs at 16px). */
+.stack {
+  display: flex;
+  gap: 2ch;
+}
+
+.tech {
+  display: inline-flex;
+  align-items: center;
+  gap: 1ch;
+}
+
+.tech svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--tech);
+}
+
+.tech-rust {
+  --tech: #dea584;
+}
+.tech-ts {
+  --tech: #7fb0e8;
+}
+.tech-cpp {
+  --tech: #9cbfe6;
+}
+.tech-vulkan {
+  --tech: #e58a8d;
+}
+.tech-python {
+  --tech: #f2d16b;
 }
 
 h2 .accent {
