@@ -99,21 +99,35 @@ button:focus-visible {
   margin: 0 auto;
 }
 
-/* Header: name left; language toggle and contact links right */
+/* Header: name left; contact icons and language toggle right, on the name's line */
 .top {
   display: flex;
   justify-content: space-between;
-  gap: 4ch;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--section-gap) 4ch;
 }
 
 .top-right {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
+  gap: 2ch;
+  height: var(--header-row);
 }
 
 .lang {
   line-height: var(--header-row);
+}
+
+/* Flat glyphs, dim until hovered like every other control */
+.icon {
+  display: flex;
+}
+
+.icon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
 }
 
 h1 {
@@ -236,28 +250,12 @@ h2 .accent {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: calc(var(--section-gap) * 2);
+  margin: calc(var(--section-gap) * 2) 0;
 }
 
 @media (max-width: 700px) {
   :root {
     --margin-x: 24px;
-  }
-
-  /* Stack the header; the toggle pins to the corner, clear of the name */
-  .top {
-    flex-direction: column;
-    gap: var(--section-gap);
-  }
-
-  .top-right {
-    align-items: flex-start;
-  }
-
-  .lang {
-    position: absolute;
-    top: var(--margin-top);
-    right: var(--margin-x);
   }
 
   h1 {

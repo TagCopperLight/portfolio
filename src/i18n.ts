@@ -7,14 +7,11 @@ export const fr: Record<string, string> = {
   "section.projects": "[PROJETS]",
   "label.school": "ÉCOLE",
   "label.location": "LIEU",
-  roadia:
-    "Simulateur et éditeur de trafic sur de vrais réseaux routiers OpenStreetMap. Équipe de 5, ENSSAT.",
-  gripsou:
-    "Tableau de bord financier auto-hébergé qui synchronise comptes bancaires et courtiers.",
-  aurora:
-    "Outil Vulkan qui affiche en temps réel les données envoyées par n'importe quel programme via un petit protocole réseau.",
-  tipe: "Graph mining et arbres de décision pour trouver les schémas de combat gagnants dans League of Legends.",
-  gravity: "Moteur physique 2D de corps rigides en Python pur.",
+  roadia: "Un simulateur de trafic en temps réel et éditeur de réseau routier",
+  gripsou: "Un tableau de bord de finances personnelles auto-hébergé",
+  aurora: "Une boîte à outils Vulkan pour visualiser des simulations et des données en direct",
+  tipe: "Graph mining et arbres de décision pour prédire l'issue des parties de League of Legends",
+  gravity: "Un moteur physique 2D aux forces et solveurs modulables",
 
   // Project pages
   "nav.back": "[← RETOUR]",
