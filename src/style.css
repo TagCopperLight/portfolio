@@ -51,7 +51,7 @@ html {
 
 body {
   margin: 0;
-  padding: var(--margin-top) var(--margin-x);
+  padding: var(--margin-top) var(--margin-x) 0;
 }
 
 h1,
