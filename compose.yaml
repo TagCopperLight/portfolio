@@ -1,0 +1,13 @@
+# Joins the external `web` network, where the VPS's main Caddy proxies to it:
+#   bourdet.be { reverse_proxy portfolio:80 }
+services:
+  portfolio:
+    build: .
+    image: portfolio
+    container_name: portfolio
+    restart: unless-stopped
+    networks: [web]
+
+networks:
+  web:
+    external: true
