@@ -346,6 +346,21 @@ h2 .accent {
     font-size: 26px;
   }
 
+  /* The icons wrap under the name; the language toggle stays on the name's line */
+  .top {
+    position: relative;
+  }
+
+  h1 {
+    padding-right: 6ch;
+  }
+
+  .lang {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
   .project::before {
     left: -16px;
     width: 6px;
