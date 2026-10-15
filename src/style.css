@@ -246,6 +246,46 @@ h1 a:hover {
   margin-top: var(--section-gap);
 }
 
+/* Previous / next project: pinned to the vertical middle, centred in each side gutter.
+   Hover takes the colour of the project it leads to; a missing neighbour stays gray.
+   Only shown once the gutters are wide enough to hold the labels. */
+.pager-prev,
+.pager-next {
+  position: fixed;
+  top: 50%;
+  --gutter: calc((100vw - var(--column)) / 2);
+}
+
+@media (max-width: 1240px) {
+  .pager {
+    display: none;
+  }
+}
+
+.pager-prev {
+  left: calc(var(--gutter) / 2);
+  transform: translate(-50%, -50%);
+}
+
+.pager-next {
+  right: calc(var(--gutter) / 2);
+  transform: translate(50%, -50%);
+}
+
+a.pager-prev:hover,
+a.pager-prev:focus-visible,
+a.pager-next:hover,
+a.pager-next:focus-visible {
+  color: var(--to);
+}
+
+span.pager-prev,
+span.pager-next {
+  color: var(--gray);
+  cursor: default;
+  user-select: none;
+}
+
 /* STACK: brand glyph before each label, in a pastel of the brand colour.
    Simple Icons (CC0), except two hand-drawn ones: Vulkan (a swoosh, its logo is a wordmark)
    and Rust (a plain gear and R, the official one blurs at 16px). */

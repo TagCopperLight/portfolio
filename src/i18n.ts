@@ -16,6 +16,8 @@ export const fr: Record<string, string> = {
 
   // Project pages
   "nav.back": "[← RETOUR]",
+  "nav.prev": "[← PRÉCÉDENT]",
+  "nav.next": "[SUIVANT →]",
   "label.context": "CADRE",
   "label.year": "ANNÉE",
   "roadia.context": "Projet de génie logiciel, ENSSAT",
