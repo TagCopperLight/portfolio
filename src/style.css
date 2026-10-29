@@ -21,6 +21,7 @@
   --orange: #f5ba60;
   --success: #dff3ac;
   --error: #edb3b6;
+  --teal: #8fe3d6;
 
   --font: "Aurora Monaco", "Monaco", "Menlo", "JetBrains Mono", "SF Mono", ui-monospace, monospace;
   --size: 16px;
@@ -320,6 +321,9 @@ span.pager-next {
 }
 .tech-python {
   --tech: #f2d16b;
+}
+.tech-pytorch {
+  --tech: #f0907c;
 }
 
 h2 .accent {

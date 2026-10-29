@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 // Paths are relative to the project root.
-const SLUGS = ["roadia", "gripsou", "aurora", "tipe", "gravity"];
+const SLUGS = ["orbitml", "roadia", "gripsou", "aurora", "tipe", "gravity"];
 
 export default defineConfig({
   build: {
