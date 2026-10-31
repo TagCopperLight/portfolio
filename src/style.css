@@ -52,7 +52,7 @@ html {
 
 body {
   margin: 0;
-  padding: var(--margin-top) var(--margin-x) 0;
+  padding: var(--margin-top) var(--margin-x) calc(var(--margin-top) * 2);
 }
 
 h1,
@@ -325,6 +325,9 @@ span.pager-next {
 .tech-pytorch {
   --tech: #f0907c;
 }
+.tech-sklearn {
+  --tech: var(--orange);
+}
 
 h2 .accent {
   color: var(--accent);
@@ -339,6 +342,68 @@ h2 .accent {
   width: 100%;
   height: auto;
   margin: calc(var(--section-gap) * 2) 0;
+  cursor: zoom-in;
+}
+
+.lightbox {
+  width: 100vw;
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--bg);
+  cursor: zoom-out;
+}
+
+.lightbox[open] {
+  display: flex;
+}
+
+.lightbox img {
+  margin: auto;
+  max-height: 100%;
+}
+
+/* Long project write-up: only the block in the current language shows */
+html[lang="en"] .story[lang="fr"],
+html[lang="fr"] .story[lang="en"] {
+  display: none;
+}
+
+.story {
+  margin-top: calc(var(--section-gap) * 2);
+}
+
+.story h3 {
+  margin: calc(var(--row) + var(--section-gap)) 0 10px;
+  font: inherit;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.story p + p {
+  margin-top: var(--section-gap);
+}
+
+/* line-height: 0 keeps the citations from pushing the lines apart */
+.story sup {
+  font-size: 0.7em;
+  line-height: 0;
+}
+
+.story figure {
+  margin: calc(var(--section-gap) * 2) 0;
+}
+
+.story .shot {
+  margin: 0;
+}
+
+.story figcaption {
+  margin-top: 10px;
+  color: var(--text-disabled);
 }
 
 @media (max-width: 700px) {
@@ -363,6 +428,13 @@ h2 .accent {
     position: absolute;
     top: 0;
     right: 0;
+  }
+
+  /* A long stack drops under the project name */
+  .project-head,
+  .project-meta {
+    flex-wrap: wrap;
+    row-gap: 0;
   }
 
   .project::before {

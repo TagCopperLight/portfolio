@@ -22,8 +22,6 @@ export const fr: Record<string, string> = {
   "label.context": "CADRE",
   "label.year": "ANNÉE",
   "orbitml.context": "Projet personnel",
-  "orbitml.body":
-    "Correction de l'erreur de SGP4, le modèle qui prédit la position d'un satellite à partir de son TLE, d'après les travaux de Peng et Bai. Sur Sentinel-6A, un petit réseau de neurones ramène l'erreur à 13 % en radial, 39 % le long de la trace et 18 % hors du plan sur 14 jours de prédiction, grâce surtout à une donnée que SGP4 ignore : la longitude du point survolé.",
   "roadia.context": "Projet de génie logiciel, ENSSAT",
   "roadia.body":
     "Éditeur et simulateur de trafic urbain permettant de modifier un réseau routier réel importé depuis OpenStreetMap, puis de mesurer l'effet des changements sur le temps de trajet et la pollution. Réalisation notamment du design de l'interface (Figma) et d'une partie importante du moteur Rust : la gestion des intersections, où les véhicules doivent respecter priorités, cédez-le-passage et feux sans collisions. Projet mené en équipe de 5 avec un processus de génie logiciel complet : planification, tests utilisateurs et documentation.",
